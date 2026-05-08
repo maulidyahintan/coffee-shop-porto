@@ -41,13 +41,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Beranda",
-      item: "https://kopiinsight.id",
+      item: "https://coffeshop.id",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Cabang",
-      item: "https://kopiinsight.id/branches",
+      item: "https://coffeshop.id/branches",
     },
   ],
 };
@@ -61,7 +61,7 @@ const branchesListSchema = {
     position: index + 1,
     item: {
       "@type": "CafeOrCoffeeShop",
-      "@id": `https://kopiinsight.id/branches/${branch.slug}`,
+      "@id": `https://coffeshop.id/branches/${branch.slug}`,
       name: branch.name,
       address: {
         "@type": "PostalAddress",
@@ -75,7 +75,7 @@ const branchesListSchema = {
         longitude: branch.lng,
       },
       telephone: branch.phone,
-      url: `https://kopiinsight.id/branches/${branch.slug}`,
+      url: `https://coffeshop.id/branches/${branch.slug}`,
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
@@ -141,7 +141,8 @@ export default function BranchesPage() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-coffee-dark/80 via-coffee-dark/65 to-coffee-dark/55" />
+          <div className="absolute inset-0 bg-gradient-to-b from-coffee-dark/90 via-coffee-dark/72 to-coffee-dark/55" />
+          <div className="absolute top-0 left-0 right-0 h-28 bg-coffee-dark/45" />
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl h-full flex items-center justify-center pt-16">
             <div className="text-center">
               <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-coffee-cream mb-6">
