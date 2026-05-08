@@ -39,12 +39,12 @@ export function SiteEntryNoticeModal() {
           </h2>
           <p className="font-lora text-base md:text-lg text-text-muted leading-relaxed">
             Web ini hanya dummy. Apabila ingin melakukan pembelian hubungi
-            085785741046.
+            85123456789.
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:justify-end">
             <a
-              href="https://wa.me/6285785741046"
+              href="https://wa.me/85123456789"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md bg-[#25D366] text-white px-4 py-2 font-semibold hover:bg-[#1ebe5d] transition-colors"

@@ -103,7 +103,7 @@ Example:
   address: "Real address from Google Maps",
   lat: -6.2634,  // From Google Maps
   lng: 106.8166, // From Google Maps
-  phone: "+62 21 XXXX XXXX",
+   phone: "85123456789",
   heroImage: "https://your-cdn.com/branch-photo.jpg",
   // ...
 }

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://kopiinsight.id/sitemap.xml",
+    sitemap: "https://coffeshop.id/sitemap.xml",
   };
 }

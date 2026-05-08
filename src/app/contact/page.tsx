@@ -78,7 +78,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-coffee-dark mb-1">Telepon</h3>
-                      <p className="text-text-muted">+62 21 7199 8888</p>
+                      <p className="text-text-muted">85123456789</p>
                       <p className="text-sm text-text-muted">
                         Senin - Jumat: 08.00 - 17.00 WIB
                       </p>
@@ -92,10 +92,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-coffee-dark mb-1">Email</h3>
                       <a
-                        href="mailto:hello@kopiinsight.id"
+                        href="mailto:hello@coffeshop.id"
                         className="text-text-muted hover:text-coffee-caramel transition-colors"
                       >
-                        hello@kopiinsight.id
+                        hello@coffeshop.id
                       </a>
                     </div>
                   </div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   </h3>
                   <div className="flex space-x-4">
                     <a
-                      href="https://instagram.com/kopiinsight"
+                      href="https://instagram.com/coffeshop"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-coffee-caramel/10 rounded-full flex items-center justify-center hover:bg-coffee-caramel hover:text-white transition-colors"
@@ -135,7 +135,7 @@ export default function ContactPage() {
                       </svg>
                     </a>
                     <a
-                      href="https://facebook.com/kopiinsight"
+                      href="https://facebook.com/coffeshop"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-coffee-caramel/10 rounded-full flex items-center justify-center hover:bg-coffee-caramel hover:text-white transition-colors"

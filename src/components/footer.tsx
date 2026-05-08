@@ -18,7 +18,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com/kopiinsight"
+                href="https://instagram.com/coffeshop"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-coffee-caramel transition-colors"
@@ -29,7 +29,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com/kopiinsight"
+                href="https://facebook.com/coffeshop"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-coffee-caramel transition-colors"
@@ -40,7 +40,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@kopiinsight.id"
+                href="mailto:hello@coffeshop.id"
                 className="hover:text-coffee-caramel transition-colors"
                 aria-label="Email"
               >
@@ -103,11 +103,11 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-start space-x-2 text-coffee-cream/80">
                 <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>+62 21 7199 8888</span>
+                <span>85123456789</span>
               </div>
               <div className="flex items-start space-x-2 text-coffee-cream/80">
                 <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>hello@kopiinsight.id</span>
+                <span>hello@coffeshop.id</span>
               </div>
               <div className="flex items-start space-x-2 text-coffee-cream/80">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
@@ -142,7 +142,7 @@ export function Footer() {
           </p>
           <p className="mt-2 text-coffee-cream/70">
             Info: Website ini adalah mockup/dummy. Untuk pembelian, hubungi
-            085785741046.
+            85123456789.
           </p>
         </div>
       </div>

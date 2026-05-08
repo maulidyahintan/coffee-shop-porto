@@ -23,7 +23,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kopiinsight.id"),
+  metadataBase: new URL("https://coffeshop.id"),
   title: {
     default: "Coffee Shop - Kopi yang Menginspirasi Setiap Teguk",
     template: "%s | Coffee Shop",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://kopiinsight.id",
+    url: "https://coffeshop.id",
     siteName: "Coffee Shop",
     title: "Coffee Shop - Kopi yang Menginspirasi Setiap Teguk",
     description:
@@ -80,8 +80,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Coffee Shop",
-  url: "https://kopiinsight.id",
-  logo: "https://kopiinsight.id/logo.png",
+  url: "https://coffeshop.id",
+  logo: "https://coffeshop.id/logo.png",
   description:
     "Coffee Shop chain premium dengan 5 cabang di seluruh Indonesia",
   address: {
@@ -90,15 +90,15 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+62-21-7199-8888",
+    telephone: "85123456789",
     contactType: "customer service",
     areaServed: "ID",
     availableLanguage: ["Indonesian", "English"],
   },
   sameAs: [
-    "https://instagram.com/kopiinsight",
-    "https://facebook.com/kopiinsight",
-    "https://twitter.com/kopiinsight",
+    "https://instagram.com/coffeshop",
+    "https://facebook.com/coffeshop",
+    "https://twitter.com/coffeshop",
   ],
 };
 
@@ -106,12 +106,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Coffee Shop",
-  url: "https://kopiinsight.id",
+  url: "https://coffeshop.id",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://kopiinsight.id/branches?search={search_term_string}",
+      urlTemplate: "https://coffeshop.id/branches?search={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

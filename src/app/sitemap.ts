@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { branches } from "@/lib/data/branches";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://kopiinsight.id";
+  const baseUrl = "https://coffeshop.id";
 
   const staticPages = [
     {
