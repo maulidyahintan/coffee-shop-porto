@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
+import { DigitalMenuOrder } from "@/components/digital-menu-order";
 import {
   getBranchBySlug,
   getAllBranchSlugs,
@@ -375,6 +376,12 @@ export default async function BranchPage({ params }: BranchPageProps) {
             </div>
           </div>
         </section>
+
+        <DigitalMenuOrder
+          branchSlug={branch.slug}
+          hideBranchSelector
+          title={`Order Online ${branch.name}`}
+        />
 
         {/* CTA */}
         <section className="py-16 bg-coffee-dark text-coffee-cream">

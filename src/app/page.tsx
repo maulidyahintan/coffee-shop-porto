@@ -1,12 +1,12 @@
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
 import { BrandStatement } from "@/components/brand-statement";
-import { FeaturesSection } from "@/components/features-section";
-import { FeaturedBranches } from "@/components/featured-branches";
-import { MenuHighlights } from "@/components/menu-highlights";
-import { Testimonials } from "@/components/testimonials";
 import { CtaSection } from "@/components/cta-section";
+import { FeaturedBranches } from "@/components/featured-branches";
+import { FeaturesSection } from "@/components/features-section";
 import { Footer } from "@/components/footer";
+import { Hero } from "@/components/hero";
+import { MenuHighlights } from "@/components/menu-highlights";
+import { Navbar } from "@/components/navbar";
+import { Testimonials } from "@/components/testimonials";
 
 export default function Home() {
   return (

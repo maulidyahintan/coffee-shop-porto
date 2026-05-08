@@ -1,6 +1,6 @@
 "use client";
 
-import { Music, Laptop, Home, Factory, Leaf, Wifi } from "lucide-react";
+import { Music, Laptop, Home, Factory, Leaf, Wifi, QrCode } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
@@ -33,7 +33,7 @@ const features = [
     icon: Wifi,
     title: "Free WiFi",
     description: "Koneksi internet cepat dan stabil",
-  },
+  }
 ];
 
 export function FeaturesSection() {

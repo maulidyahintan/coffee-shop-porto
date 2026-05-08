@@ -5,6 +5,7 @@ export interface Branch {
   city: string;
   address: string;
   phone: string;
+  whatsapp: string;
   lat: number;
   lng: number;
   description: string;
@@ -41,6 +42,7 @@ export const branches: Branch[] = [
     city: "Jakarta Selatan",
     address: "Jl. Kemang Raya No. 88, Bangka, Mampang Prapatan, Jakarta Selatan 12730",
     phone: "+62 21 7199 8888",
+    whatsapp: "6281111111001",
     lat: -6.2634,
     lng: 106.8166,
     description: "Cabang flagship kami di jantung Kemang dengan roastery sendiri. Nikmati atmosfer hangat dengan live music setiap Jumat malam.",
@@ -86,6 +88,7 @@ export const branches: Branch[] = [
     city: "Bandung",
     address: "Jl. Ir. H. Juanda (Dago) No. 125, Coblong, Bandung, Jawa Barat 40135",
     phone: "+62 22 2500 3333",
+    whatsapp: "6281111111002",
     lat: -6.8978,
     lng: 107.6128,
     description: "Terletak di area Dago yang sejuk, cabang ini menawarkan pemandangan pegunungan dan suasana cozy untuk bekerja atau bersantai.",
@@ -130,6 +133,7 @@ export const branches: Branch[] = [
     city: "Surabaya",
     address: "Pakuwon Mall, Lantai Ground, Jl. Puncak Indah Lontar No. 2, Surabaya, Jawa Timur 60216",
     phone: "+62 31 7345 6789",
+    whatsapp: "6281111111003",
     lat: -7.2894,
     lng: 112.6789,
     description: "Lokasi strategis di Pakuwon Mall dengan konsep modern-minimalis. Sempurna untuk meeting atau me-time sambil berbelanja.",
@@ -174,6 +178,7 @@ export const branches: Branch[] = [
     city: "Yogyakarta",
     address: "Jl. Prawirotaman II No. 45, Mergangsan, Yogyakarta 55153",
     phone: "+62 274 388 9999",
+    whatsapp: "6281111111004",
     lat: -7.8126,
     lng: 110.3776,
     description: "Berada di kawasan heritage Prawirotaman dengan bangunan bergaya Jawa kolonial. Ruang terbuka hijau yang asri untuk bersantai.",
@@ -218,6 +223,7 @@ export const branches: Branch[] = [
     city: "Bali",
     address: "Jl. Pantai Batu Bolong No. 88X, Canggu, Kec. Kuta Utara, Badung, Bali 80351",
     phone: "+62 361 846 7777",
+    whatsapp: "6281111111005",
     lat: -8.6481,
     lng: 115.1384,
     description: "Cabang tropical beachside kami dengan desain terbuka dan pemandangan sunset. Spot favorit para digital nomad dan surfer.",
