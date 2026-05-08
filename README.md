@@ -1,181 +1,132 @@
-# Coffee Shop - Marketing Website
+# Coffee Shop Web
 
-Marketing website for Coffee Shop, an Indonesian Coffee Shop chain with 5 branches across Indonesia.
+Website marketing dan pemesanan sederhana untuk jaringan kedai kopi Coffee Shop (5 cabang di Indonesia).
 
-## Tech Stack
+## Stack
 
-- Next.js 14+ (App Router)
-- TypeScript (strict mode)
-- Tailwind CSS
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
 - Framer Motion
-- Lucide React Icons
-- Google Fonts (Playfair Display, Lora, Plus Jakarta Sans)
+- Leaflet + React Leaflet
+- Lucide React
 
-## Getting Started
+## Menjalankan Project
 
-Install dependencies:
+Install dependency:
 
 ```bash
 npm install
 ```
 
-Run the development server:
+Jalankan mode development:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser.
-
-Build for production:
+Build production:
 
 ```bash
 npm run build
 npm start
 ```
 
-## Project Structure
+Lint:
 
+```bash
+npm run lint
 ```
+
+## Struktur Utama
+
+```text
 src/
-├── app/                          # Next.js App Router pages
-│   ├── layout.tsx               # Root layout with fonts & metadata
-│   ├── page.tsx                 # Homepage
-│   ├── about/page.tsx           # About page
-│   ├── branches/                # Branches section
-│   │   ├── page.tsx            # Branches list
-│   │   └── [slug]/             # Dynamic branch pages
-│   │       ├── page.tsx        # Branch detail
-│   │       └── menu/page.tsx   # Branch menu
-│   ├── contact/page.tsx         # Contact page
-│   ├── not-found.tsx           # 404 page
-│   ├── sitemap.ts              # Dynamic sitemap
-│   └── robots.ts               # Robots.txt
-├── components/                  # React components
-│   ├── navbar.tsx              # Navigation (client component)
-│   ├── footer.tsx              # Footer
-│   ├── hero.tsx                # Homepage hero
-│   ├── branches-grid.tsx       # Branches with filters
-│   ├── menu-grid.tsx           # Menu display with tabs
-│   └── ...                     # Other components
-└── lib/
-    ├── utils.ts                # cn() helper
-    └── data/                   # Static data
-        ├── branches.ts         # Branch data (5 locations)
-        └── menu-items.ts       # Menu data
-
+   app/
+      layout.tsx
+      page.tsx
+      about/page.tsx
+      branches/page.tsx
+      branches/[slug]/page.tsx
+      branches/[slug]/menu/page.tsx
+      contact/page.tsx
+      order/page.tsx
+      not-found.tsx
+      robots.ts
+      sitemap.ts
+   components/
+      navbar.tsx
+      footer.tsx
+      hero.tsx
+      branches-grid.tsx
+      menu-grid.tsx
+      branches/
+      digital-menu-order.tsx
+      ...
+   lib/
+      data/branches.ts
+      data/menu-items.ts
+      utils.ts
 ```
 
-## Features
+## Fitur yang Ada di Web
 
-- Fully responsive (mobile-first)
-- SEO optimized with Next.js Metadata API
-- JSON-LD structured data for all pages
-- Dynamic sitemap and robots.txt
-- 5 branch locations with individual pages and menus
-- Framer Motion animations
-- Image optimization with next/image
-- Accessibility (WCAG compliant)
+1. Homepage marketing lengkap
+- Hero, brand statement, section keunggulan, highlight cabang, highlight menu, testimoni, dan CTA.
 
-## Data Structure
+2. Navigasi responsif
+- Navbar desktop/mobile dengan menu Beranda, Cabang, Order Digital, Cerita, dan Kontak.
 
-All branch and menu data is centralized in `/src/lib/data/`:
+3. Halaman daftar cabang
+- Menampilkan semua cabang.
+- Ada locator peta interaktif untuk melihat lokasi.
 
-- **`branches.ts`** - Contains all 5 branches with addresses, lat/lng, phone, hours, features, and menu item IDs
-- **`menu-items.ts`** - Contains all menu items with categories, prices, descriptions, and images
+4. Detail cabang (dynamic route)
+- Informasi cabang: alamat, jam operasional, fasilitas, galeri, dan embed Google Maps.
+- CTA ke halaman menu cabang.
 
-### Updating Branch Data
+5. Halaman menu per cabang
+- Menampilkan item menu sesuai cabang.
+- Kategori menu: espresso, manual brew, signature, non-coffee, dan food.
 
-To replace placeholder data with real Google Maps data:
+6. Order digital via WhatsApp
+- Pilih item menu dan quantity.
+- Hitung total otomatis.
+- Pilih cabang (atau otomatis dari halaman cabang).
+- Input nama pemesan, nomor meja, catatan umum, dan note per item.
+- Generate pesan order otomatis ke WhatsApp cabang.
+- Menampilkan notifikasi bahwa pembayaran tetap manual di kasir.
 
-1. Open `/src/lib/data/branches.ts`
-2. Update each branch object with:
-   - Real address
-   - Correct lat/lng coordinates
-   - Actual phone numbers
-   - Real opening hours
-   - Real photo URLs (replace Unsplash placeholders)
-   - Real video URL (if available)
+7. Halaman order khusus
+- Route terpisah di `/order` dengan hero section dan komponen order digital.
 
-Example:
-```typescript
-{
-  address: "Real address from Google Maps",
-  lat: -6.2634,  // From Google Maps
-  lng: 106.8166, // From Google Maps
-   phone: "85123456789",
-  heroImage: "https://your-cdn.com/branch-photo.jpg",
-  // ...
-}
-```
+8. SEO dasar
+- Metadata per halaman.
+- Open Graph dan Twitter card.
+- JSON-LD.
+- `robots.ts` dan `sitemap.ts`.
 
-## Mengganti Foto Cabang
+9. Responsif dan animasi
+- Layout mobile-first.
+- Animasi ringan dengan Framer Motion.
 
-Foto saat ini adalah placeholder SVG. Untuk mengganti dengan foto asli:
+## Data dan Konfigurasi
 
-### Cara Replace Foto:
+Sumber data utama:
 
-1. **Siapkan foto untuk setiap cabang:**
-   - `hero.svg` atau `hero.jpg` - Hero image untuk halaman detail (1920×1080px ideal)
-   - `gallery-1.svg` s/d `gallery-4.svg` atau `.jpg` - Foto galeri (1200×800px ideal)
+- `src/lib/data/branches.ts`: data cabang, jam operasional, fasilitas, dan relasi menu.
+- `src/lib/data/menu-items.ts`: data semua item menu.
 
-2. **Lokasi file per cabang:**
-   ```
-   public/branches/
-   ├── jakarta-selatan/
-   │   ├── hero.svg (replace with hero.jpg)
-   │   ├── gallery-1.svg (replace with gallery-1.jpg)
-   │   ├── gallery-2.svg
-   │   ├── gallery-3.svg
-   │   └── gallery-4.svg
-   ├── bandung-dago/
-   ├── surabaya-pakuwon/
-   ├── yogyakarta-prawirotaman/
-   └── bali-canggu/
-   ```
+Nomor WhatsApp order dapat dikontrol melalui:
 
-3. **Format file yang didukung:**
-   - JPG/JPEG (recommended, kompres dulu)
-   - WebP (lebih kecil, modern browsers)
-   - PNG (hindari untuk foto, file besar)
-   - Target ukuran: <300KB per file
+- Field `whatsapp` per cabang di `branches.ts`.
+- Fallback env `NEXT_PUBLIC_WHATSAPP_ORDER_NUMBER`.
 
-4. **Update path di code (jika ganti format):**
-   - Buka `/src/lib/data/branches.ts`
-   - Ganti `.svg` jadi `.jpg` atau `.webp`:
-   ```typescript
-   heroImage: "/branches/jakarta-selatan/hero.jpg", // was .svg
-   galleryImages: [
-     "/branches/jakarta-selatan/gallery-1.jpg", // was .svg
-     // ...
-   ]
-   ```
+## Catatan Penggunaan
 
-### Sumber Foto Legal:
-
-- **Foto sendiri** - Ambil foto langsung di cabang
-- **Hire fotografer** - Professional photography shoot
-- **Google My Business** - Jika Anda owner, bisa export dari GMB dashboard
-- **JANGAN**: Copy foto user dari Google Maps Reviews (melanggar hak cipta)
-
-### Foto dari Google Maps (Legal Way):
-
-Website sudah dilengkapi Google Maps iframe embed di halaman detail cabang. User bisa:
-- Lihat foto Google Maps langsung di iframe
-- Klik "Buka di Google Maps" untuk lihat semua foto & reviews
-- Street View & 360° photos otomatis tampil
-
-Ini cara legal "menggunakan" foto Google Maps tanpa copy paste.
-
-## TODOs for Production
-
-1. Replace Unsplash placeholder images with real branch photos
-2. Update branch data in `/src/lib/data/branches.ts` with actual Google Maps data
-3. Add real video URLs to branch data (currently placeholder)
-4. Connect contact form to backend API or email service
-5. Add analytics (Google Analytics, etc.)
-6. Test on real devices at all breakpoints
-7. Run Lighthouse audit and optimize
+- Website ini ditujukan sebagai web promosi + alur order sederhana.
+- Flow pembayaran belum online gateway, masih diarahkan manual ke kasir.
 
 ## License
 
