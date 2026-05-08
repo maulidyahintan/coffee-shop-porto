@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coffee Shop Web
 
-## Getting Started
+Website marketing dan pemesanan sederhana untuk jaringan kedai kopi Coffee Shop (5 cabang di Indonesia).
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- Leaflet + React Leaflet
+- Lucide React
+
+## Menjalankan Project
+
+Install dependency:
+
+```bash
+npm install
+```
+
+Jalankan mode development:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lint:
 
-## Learn More
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Struktur Utama
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+src/
+   app/
+      layout.tsx
+      page.tsx
+      about/page.tsx
+      branches/page.tsx
+      branches/[slug]/page.tsx
+      branches/[slug]/menu/page.tsx
+      contact/page.tsx
+      order/page.tsx
+      not-found.tsx
+      robots.ts
+      sitemap.ts
+   components/
+      navbar.tsx
+      footer.tsx
+      hero.tsx
+      branches-grid.tsx
+      menu-grid.tsx
+      branches/
+      digital-menu-order.tsx
+      ...
+   lib/
+      data/branches.ts
+      data/menu-items.ts
+      utils.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Fitur yang Ada di Web
 
-## Deploy on Vercel
+1. Homepage marketing lengkap
+- Hero, brand statement, section keunggulan, highlight cabang, highlight menu, testimoni, dan CTA.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navigasi responsif
+- Navbar desktop/mobile dengan menu Beranda, Cabang, Order Digital, Cerita, dan Kontak.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Halaman daftar cabang
+- Menampilkan semua cabang.
+- Ada locator peta interaktif untuk melihat lokasi.
+
+4. Detail cabang (dynamic route)
+- Informasi cabang: alamat, jam operasional, fasilitas, galeri, dan embed Google Maps.
+- CTA ke halaman menu cabang.
+
+5. Halaman menu per cabang
+- Menampilkan item menu sesuai cabang.
+- Kategori menu: espresso, manual brew, signature, non-coffee, dan food.
+
+6. Order digital via WhatsApp
+- Pilih item menu dan quantity.
+- Hitung total otomatis.
+- Pilih cabang (atau otomatis dari halaman cabang).
+- Input nama pemesan, nomor meja, catatan umum, dan note per item.
+- Generate pesan order otomatis ke WhatsApp cabang.
+- Menampilkan notifikasi bahwa pembayaran tetap manual di kasir.
+
+7. Halaman order khusus
+- Route terpisah di `/order` dengan hero section dan komponen order digital.
+
+8. SEO dasar
+- Metadata per halaman.
+- Open Graph dan Twitter card.
+- JSON-LD.
+- `robots.ts` dan `sitemap.ts`.
+
+9. Responsif dan animasi
+- Layout mobile-first.
+- Animasi ringan dengan Framer Motion.
+
+## Data dan Konfigurasi
+
+Sumber data utama:
+
+- `src/lib/data/branches.ts`: data cabang, jam operasional, fasilitas, dan relasi menu.
+- `src/lib/data/menu-items.ts`: data semua item menu.
+
+Nomor WhatsApp order dapat dikontrol melalui:
+
+- Field `whatsapp` per cabang di `branches.ts`.
+- Fallback env `NEXT_PUBLIC_WHATSAPP_ORDER_NUMBER`.
+
+## Catatan Penggunaan
+
+- Website ini ditujukan sebagai web promosi + alur order sederhana.
+- Flow pembayaran belum online gateway, masih diarahkan manual ke kasir.
+
+## License
+
+Proprietary - Coffee Shop 2026

@@ -1,0 +1,12 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#3d1c00"/>
+  <text x="960" y="500" font-family="Arial, sans-serif" font-size="48" fill="#f5e6d3" text-anchor="middle" font-weight="bold">
+    Coffee Shop Bali Canggu
+  </text>
+  <text x="960" y="580" font-family="Arial, sans-serif" font-size="36" fill="#c68642" text-anchor="middle">
+    Hero Image - Replace with actual photo
+  </text>
+  <text x="960" y="640" font-family="Arial, sans-serif" font-size="24" fill="#f5e6d3" text-anchor="middle" opacity="0.7">
+    1920 x 1080 px
+  </text>
+</svg>
