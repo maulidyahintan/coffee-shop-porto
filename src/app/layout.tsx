@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Playfair_Display, Lora, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/json-ld";
-import { SiteEntryNoticeModal } from "@/components/site-entry-notice-modal";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -90,7 +89,7 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "85123456789",
+    telephone: "+62-21-7199-8888",
     contactType: "customer service",
     areaServed: "ID",
     availableLanguage: ["Indonesian", "English"],
@@ -133,7 +132,6 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col font-jakarta">
         {children}
-        <SiteEntryNoticeModal />
       </body>
     </html>
   );

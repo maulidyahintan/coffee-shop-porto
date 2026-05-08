@@ -78,7 +78,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-coffee-dark mb-1">Telepon</h3>
-                      <p className="text-text-muted">85123456789</p>
+                      <p className="text-text-muted">+62 21 7199 8888</p>
                       <p className="text-sm text-text-muted">
                         Senin - Jumat: 08.00 - 17.00 WIB
                       </p>

@@ -103,7 +103,7 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-start space-x-2 text-coffee-cream/80">
                 <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>85123456789</span>
+                <span>+62 21 7199 8888</span>
               </div>
               <div className="flex items-start space-x-2 text-coffee-cream/80">
                 <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
@@ -139,10 +139,6 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-coffee-cream/20 text-center text-coffee-cream/60 text-sm">
           <p>
             &copy; {new Date().getFullYear()} Coffee Shop. All rights reserved.
-          </p>
-          <p className="mt-2 text-coffee-cream/70">
-            Info: Website ini adalah mockup/dummy. Untuk pembelian, hubungi
-            85123456789.
           </p>
         </div>
       </div>

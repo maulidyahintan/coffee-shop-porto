@@ -153,9 +153,9 @@ export default async function BranchPage({ params }: BranchPageProps) {
     <>
       <JsonLd data={generateBranchSchema(branch)} />
       <Navbar />
-      <main>
+      <main className="pt-20">
         {/* Hero */}
-        <section className="relative h-[56vh] min-h-[420px] overflow-hidden">
+        <section className="relative h-[60vh] min-h-[400px]">
           <Image
             src={branch.heroImage}
             alt={branch.name}
@@ -164,10 +164,10 @@ export default async function BranchPage({ params }: BranchPageProps) {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-coffee-dark/90 via-coffee-dark/72 to-coffee-dark/55" />
-          <div className="absolute top-0 left-0 right-0 h-28 bg-coffee-dark/45" />
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl h-full flex items-center justify-center pt-16">
-            <div className="text-center text-white">
+          <div className="absolute inset-0 bg-gradient-to-t from-coffee-dark/80 via-coffee-dark/40 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 pb-12">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+              <div className="text-white">
                 <div className="flex items-center space-x-2 mb-3">
                   <MapPin className="h-5 w-5 text-coffee-caramel" />
                   <span className="text-coffee-caramel font-semibold">
@@ -177,9 +177,10 @@ export default async function BranchPage({ params }: BranchPageProps) {
                 <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                   {branch.name}
                 </h1>
-                <p className="font-lora text-lg md:text-xl text-coffee-cream/90 max-w-3xl mx-auto">
+                <p className="font-lora text-lg md:text-xl text-coffee-cream/90 max-w-3xl">
                   {branch.description}
                 </p>
+              </div>
             </div>
           </div>
         </section>
