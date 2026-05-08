@@ -140,6 +140,10 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} Coffee Shop. All rights reserved.
           </p>
+          <p className="mt-2 text-coffee-cream/70">
+            Info: Website ini adalah mockup/dummy. Untuk pembelian, hubungi
+            085785741046.
+          </p>
         </div>
       </div>
     </footer>
